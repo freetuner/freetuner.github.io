@@ -1,10 +1,7 @@
 
-
-//valitaan kaikki elemnentit
 const audiot = document.querySelectorAll("audio");
 const buttons = document.querySelectorAll(".button");
 
-//lisää tapahtumakuuntelijat
 buttons.forEach(button => {
     button.addEventListener("click",()=>{
         const index = button.getAttribute("data-index");
@@ -13,9 +10,7 @@ buttons.forEach(button => {
     
 });
 
-
 function playSound(index) {
-    // Hae äänielementti indeksin perusteella
     const audio = audiot[index];
     const button = buttons[index];
     
@@ -27,4 +22,3 @@ function playSound(index) {
         button.classList.remove("onplay");
     }, 1500);
 }
- 
